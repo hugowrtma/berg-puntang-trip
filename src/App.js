@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import './index.css';
+import HeroSection from './components/HeroSection';
+import CrewSection from './components/CrewSection';
+import RideSection from './components/RideSection';
+import JourneySection from './components/JourneySection';
+import ExploreSection from './components/ExploreSection';
+import RundownSection from './components/RundownSection';
+import PackSection from './components/PackSection';
+import InfoSection from './components/InfoSection';
+import EndSection from './components/EndSection';
 
 function App() {
+  // Aktifkan smooth scroll di seluruh dokumen
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="font-body bg-cream text-forest">
+      <HeroSection />
+      <CrewSection />
+      <RideSection />
+      <JourneySection />
+      <ExploreSection />
+      <RundownSection />
+      <PackSection />
+      <InfoSection />
+      <EndSection />
+    </main>
   );
 }
 
