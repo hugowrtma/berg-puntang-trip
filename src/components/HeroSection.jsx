@@ -8,7 +8,7 @@ const HeroSection = () => {
           anak anak lucu goes to BERG Puntang
         </h1>
         <p className="text-lg text-leaf font-body">3 hari 3 malam</p>
-        <a href="#crew" className="inline-block mt-6 px-6 py-3 bg-leaf text-white rounded-full shadow-soft hover:opacity-90 transition">scroll kebawah ges</a>
+        <a href="#crew" className="inline-block mt-6 px-6 py-3 bg-leaf text-white rounded-full shadow-soft hover:opacity-90 transition">scroll kebawah ye</a>
       </div>
       <div className="md:w-1/2">
         <img src="/assets/trip.gif" alt="Trip GIF" className="rounded-full w-72 h-72 object-cover mx-auto shadow-lg" />
