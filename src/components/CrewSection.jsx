@@ -104,7 +104,7 @@ const CrewSection = () => {
               <img
                 src={person.avatar || defaultAvatar}
                 alt={person.name}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover shadow-md"
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover shadow-md"
               />
               {/* Tombol Edit */}
               <button
