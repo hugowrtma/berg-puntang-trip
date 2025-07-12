@@ -2,7 +2,7 @@ import React from 'react';
 
 const InfoSection = () => {
   return (
-    <section id="info" className="bg-leaf/80 text-forest py-20 px-8 md:px-16">
+    <section id="info" className="bg-cream text-forest py-20 px-8 md:px-16">
       <h2 className="text-3xl font-heading mb-10">informasi penting lainnya</h2>
 
       <div className="grid md:grid-cols-2 gap-10 text-sm leading-relaxed">
@@ -41,7 +41,7 @@ const InfoSection = () => {
         </div>
       </div>
 
-      <p className="mt-10 text-center text-cream italic font-body">
+      <p className="mt-10 text-center text-leaf italic font-body">
         “kesiapan adalah kunci kenyamanan”
       </p>
     </section>

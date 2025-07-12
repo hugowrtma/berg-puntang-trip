@@ -2,7 +2,7 @@ import React from 'react';
 
 const PackSection = () => {
   return (
-    <section id="pack" className="bg-cream text-forest py-20 px-8 md:px-16">
+    <section id="pack" className="bg-leaf/80 text-forest py-20 px-8 md:px-16">
       <h2 className="text-3xl font-heading mb-10">persiapan & perlengkapan</h2>
 
       <div className="grid md:grid-cols-2 gap-12 text-sm leading-relaxed">
@@ -37,7 +37,7 @@ const PackSection = () => {
         </ul>
       </div>
 
-      <p className="mt-10 text-center text-leaf italic font-body">
+      <p className="mt-10 text-center text-cream italic font-body">
         “persiapan matang untuk petualangan yang tak terlupakan”
       </p>
     </section>

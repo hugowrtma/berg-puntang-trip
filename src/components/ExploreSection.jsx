@@ -14,7 +14,7 @@ const images = [
 
 const ExploreSection = () => {
   return (
-    <section id="explore" className="bg-cream text-forest py-20 px-8 md:px-16">
+    <section id="explore" className="bg-leaf/80 text-forest py-20 px-8 md:px-16">
       <h2 className="text-3xl font-heading mb-6">Pesona Berg Puntang</h2>
 
       <p className="mb-10 max-w-3xl text-sm md:text-base text-forest">
@@ -46,7 +46,7 @@ const ExploreSection = () => {
       </ul>
 
       {/* Tips */}
-      <div className="bg-leaf/30 rounded-md p-4 text-sm space-y-2 mb-8">
+      <div className="bg-cream/90 rounded-md p-4 text-sm space-y-2 mb-8">
         <p><strong>📍 Lokasi:</strong> Jl. Gn. Puntang, Pasirmulya, Banjaran, Bandung</p>
         <p><strong>⛺ HTM:</strong> Rp25.000/orang (area wisata), Rp10.000 masuk kafe, camping mulai dari Rp200.000/2 orang</p>
         <p><strong>🕗 Jam buka:</strong> 08.00 – 20.00 WIB (setiap hari)</p>
@@ -54,7 +54,7 @@ const ExploreSection = () => {
       </div>
 
       {/* Quote */}
-      <p className="text-center text-leaf italic font-body">
+      <p className="text-center text-cream italic font-body">
         “Dari ketenangan alam hingga momen kebersamaan, Berg Puntang siap menyambut kita.”
       </p>
     </section>

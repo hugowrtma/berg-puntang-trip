@@ -19,9 +19,9 @@ function App() {
   return (
     <main className="font-body bg-cream text-forest">
       <HeroSection />
+      <ExploreSection />
       <RideSection />
       <JourneySection />
-      <ExploreSection />
       <RundownSection />
       <PackSection />
       <InfoSection />
