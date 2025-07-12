@@ -1,60 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { supabase } from '../lib/supabaseClient';
 import { FaTrash, FaPen } from 'react-icons/fa';
+import ImageUploader from './ImageUploaderCloudinary'; // Ganti ini
 
 const defaultAvatar = '/assets/default-avatar.png';
-const UPLOADTHING_TOKEN='eyJhcGlLZXkiOiJza19saXZlXzZjZWJjYjQ5NmM3YTk1YzM0YzEwMmU4MTJlODAyM2IzNzhjMzVlYTk5YzgxMjgzOWY4Y2RhZTlmMWMyY2ViOWQiLCJhcHBJZCI6ImNxaGE4dTRjbHIiLCJyZWdpb25zIjpbInNlYTEiXX0='
-
-// Komponen Upload Foto
-const ImageUploader = ({ onUploaded }) => {
-  const [uploading, setUploading] = useState(false);
-
-  const handleFileChange = async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    setUploading(true);
-
-    try {
-      const res = await axios.post(
-        'https://uploadthing.com/api/uploadFiles',
-        {
-          files: [{ name: file.name, type: file.type }],
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${UPLOADTHING_TOKEN}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-
-      const { key, url } = res.data[0];
-
-      await axios.put(url, file, {
-        headers: { 'Content-Type': file.type },
-      });
-
-      const finalUrl = `https://utfs.io/f/${key}`;
-      onUploaded(finalUrl);
-    } catch (err) {
-      console.error(err);
-      alert('Upload gagal');
-    } finally {
-      setUploading(false);
-    }
-  };
-
-  return (
-    <div className="mb-3">
-      <label className="block font-semibold mb-1">Foto (opsional)</label>
-      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-        <input type="file" accept="image/*" onChange={handleFileChange} />
-        {uploading && <span className="text-sm text-gray-600">Mengunggah...</span>}
-      </div>
-    </div>
-  );
-};
 
 const CrewSection = () => {
   const [crew, setCrew] = useState([]);
