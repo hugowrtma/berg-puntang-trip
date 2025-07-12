@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabaseClient';
 import { FaTrash, FaPen } from 'react-icons/fa';
 import ImageUploader from '../components/ImageUploaderCloudinary';
 
-const defaultAvatar = '/assets/avatar.png';
+const defaultAvatar = '/assets/avatar.png'; // ✅ Pastikan file ini ada di /public/assets/
 
 const CrewSection = () => {
   const [crew, setCrew] = useState([]);
@@ -12,13 +12,16 @@ const CrewSection = () => {
   const [loading, setLoading] = useState(false);
   const [editing, setEditing] = useState(null);
 
-  useEffect(() => {
-    supabase
+  const fetchCrew = async () => {
+    const { data, error } = await supabase
       .from('crew')
       .select('*')
-      .order('created_at', { ascending: true })
-      .then(({ data }) => data && setCrew(data))
-      .catch(console.error);
+      .order('created_at', { ascending: true });
+    if (!error) setCrew(data);
+  };
+
+  useEffect(() => {
+    fetchCrew();
   }, []);
 
   const handleSubmit = async (e) => {
@@ -26,9 +29,9 @@ const CrewSection = () => {
     if (!form.name || !form.role || !form.agree) return;
     setLoading(true);
 
-    const avatar = avatarUrl || defaultAvatar;
+    const avatar = avatarUrl?.trim() ? avatarUrl : defaultAvatar;
 
-    const { data, error } = await supabase.from('crew').insert([
+    const { error } = await supabase.from('crew').insert([
       {
         name: form.name,
         role: form.role,
@@ -37,9 +40,7 @@ const CrewSection = () => {
     ]);
 
     if (!error) {
-      if (Array.isArray(data)) {
-        setCrew((prev) => [...prev, ...data]);
-      }
+      await fetchCrew(); // ✅ Refresh otomatis
       setForm({ name: '', role: '', agree: false });
       setAvatarUrl(null);
     } else {
@@ -53,7 +54,7 @@ const CrewSection = () => {
   const deleteCrew = async (id) => {
     if (!window.confirm('Yakin ingin hapus?')) return;
     const { error } = await supabase.from('crew').delete().eq('id', id);
-    if (!error) setCrew((prev) => prev.filter((c) => c.id !== id));
+    if (!error) await fetchCrew();
   };
 
   const openEdit = (person) => setEditing(person);
@@ -62,18 +63,17 @@ const CrewSection = () => {
   const handleUpdate = async () => {
     if (!editing.name || !editing.role) return;
 
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('crew')
       .update({
         name: editing.name,
         role: editing.role,
-        avatar: editing.avatar || defaultAvatar,
+        avatar: editing.avatar?.trim() || defaultAvatar,
       })
-      .eq('id', editing.id)
-      .select();
+      .eq('id', editing.id);
 
-    if (!error && Array.isArray(data)) {
-      setCrew((prev) => prev.map((c) => (c.id === editing.id ? data[0] : c)));
+    if (!error) {
+      await fetchCrew();
       closeEdit();
     } else {
       alert('Gagal update');
@@ -88,29 +88,34 @@ const CrewSection = () => {
         <p className="text-sm text-forest">Mau ikut? Isi form di bawah ya.</p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-16">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-16">
         {!crew.length && (
           <p className="col-span-full text-center italic text-cream">
             Belum ada yang mendaftar
           </p>
         )}
         {crew.map((person) => (
-          <div key={person.id} className="relative text-center space-y-2">
+          <div
+            key={person.id}
+            className="relative text-center space-y-2 group"
+          >
             <div className="relative inline-block">
               <img
                 src={person.avatar || defaultAvatar}
                 alt={person.name}
                 className="w-20 h-20 rounded-full object-cover shadow-md"
               />
+              {/* Tombol Edit */}
               <button
                 onClick={() => openEdit(person)}
-                className="absolute top-0 left-0 bg-blue-500 text-white p-1 rounded-full"
+                className="absolute top-0 left-0 bg-blue-500 text-white p-1 rounded-full opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition"
               >
                 <FaPen size={12} />
               </button>
+              {/* Tombol Delete */}
               <button
                 onClick={() => deleteCrew(person.id)}
-                className="absolute top-0 right-0 bg-red-500 text-white p-1 rounded-full"
+                className="absolute top-0 right-0 bg-red-500 text-white p-1 rounded-full opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition"
               >
                 <FaTrash size={12} />
               </button>
@@ -192,7 +197,9 @@ const CrewSection = () => {
             />
 
             <ImageUploader
-              onUploaded={(url) => setEditing((prev) => ({ ...prev, avatar: url }))}
+              onUploaded={(url) =>
+                setEditing((prev) => ({ ...prev, avatar: url }))
+              }
             />
 
             <div className="flex justify-end space-x-2">
