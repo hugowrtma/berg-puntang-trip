@@ -36,6 +36,23 @@ const EndSection = () => {
       id="end"
       className="relative bg-cream text-forest py-20 px-8 md:px-16 text-center"
     >
+      <div className="flex justify-center items-center gap-4 flex-wrap mb-8">
+      <img
+          src="https://cdn.dribbble.com/userupload/23533744/file/original-13e576fdc1842bc837417d79c1941de0.gif"
+          alt="Camping gif 3"
+          className="w-32 h-32 sm:w-40 sm:h-40 rounded object-cover"
+        />
+        <img
+          src="https://i.gifer.com/P1w.gif"
+          alt="Camping gif 2"
+          className="w-32 h-32 sm:w-40 sm:h-40 rounded object-cover"
+        />
+        <img
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/414a9281017073.5cf1d8920b7a2.gif"
+          alt="Camping gif 1"
+          className="w-32 h-32 sm:w-40 sm:h-40 rounded object-cover"
+        />
+      </div>
       <h2 className="text-3xl font-heading mb-4">sampai jumpa di berg puntang!</h2>
 
       <p className="text-lg font-body mb-6 max-w-xl mx-auto">
@@ -47,11 +64,11 @@ const EndSection = () => {
         onClick={handleCopy}
         className="inline-block px-6 py-3 bg-leaf text-white rounded-full shadow-md hover:opacity-90 transition"
       >
-        {copied ? 'Link berhasil disalin!' : '📤 bagikan rencana ini'}
+        {copied ? 'Link berhasil disalin!' : 'bagikan rencana ini'}
       </button>
 
       <p className="mt-10 text-sm text-gray-500">
-        dibuat dengan ❤️ oleh Hugo, dibantu ChatGPT & Gemini
+        dibuat dengan ❤️ oleh Hugo
       </p>
 
       {/* ✅ Scroll to Top Button */}
