@@ -15,7 +15,7 @@ const HeroSection = () => {
           href="#crew"
           className="inline-block mt-6 px-6 py-3 bg-leaf text-white rounded-full shadow-soft hover:opacity-90 transition"
         >
-          scroll kebawah ye
+          yuk langsung ikut aja!
         </a>
       </div>
       <div className="md:w-1/2">
