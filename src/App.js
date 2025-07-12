@@ -19,13 +19,13 @@ function App() {
   return (
     <main className="font-body bg-cream text-forest">
       <HeroSection />
-      <CrewSection />
       <RideSection />
       <JourneySection />
       <ExploreSection />
       <RundownSection />
       <PackSection />
       <InfoSection />
+      <CrewSection />
       <EndSection />
     </main>
   );
