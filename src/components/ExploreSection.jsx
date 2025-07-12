@@ -28,7 +28,9 @@ const ExploreSection = () => {
             key={index}
             src={src}
             alt={`spot-${index + 1}`}
-            className="rounded-lg shadow-md object-cover h-52 w-full"
+            className={`rounded-lg shadow-md object-cover h-52 w-full ${
+              index === 8 ? 'hidden sm:block' : ''
+            }`}
           />
         ))}
       </div>
