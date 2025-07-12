@@ -3,7 +3,7 @@ import React from 'react';
 const JourneySection = () => {
   return (
     <section id="journey" className="bg-leaf/80 text-forest py-20 px-8 md:px-16">
-      <h2 className="text-3xl font-heading mb-4">Rute Perjalanan</h2>
+      <h2 className="text-3xl font-heading mb-4">rute perjalanan</h2>
       <p className="mb-10 text-sm md:text-base max-w-2xl">
         Perjalanan dimulai dari <strong>Bekasi</strong> menuju <strong>BERG Puntang</strong>,
         melintasi jalur utama Tol Cipularang hingga Soreang. Nikmati suasana perjalanan sambil menikmati pemandangan perbukitan dan udara yang semakin sejuk.
