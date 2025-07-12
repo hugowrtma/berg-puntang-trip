@@ -83,7 +83,7 @@ const CrewSection = () => {
 
   return (
     <section id="crew" className="bg-leaf/80 text-forest py-20 px-4 md:px-16">
-      <div className="flex justify-between items-baseline mb-8">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-8 space-y-1 sm:space-y-0">
         <h2 className="text-3xl font-heading">Siapa aja nih?</h2>
         <p className="text-sm text-forest">Mau ikut? Isi form di bawah ya.</p>
       </div>
