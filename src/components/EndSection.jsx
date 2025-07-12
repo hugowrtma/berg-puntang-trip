@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FaArrowUp } from 'react-icons/fa';
 
 const EndSection = () => {
   const [copied, setCopied] = useState(false);
+  const [showScroll, setShowScroll] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.href).then(() => {
@@ -10,10 +12,29 @@ const EndSection = () => {
     });
   };
 
+  const scrollToTop = () => {
+    const home = document.getElementById('home');
+    if (home) {
+      home.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  // Detect scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section
       id="end"
-      className="bg-cream text-forest py-20 px-8 md:px-16 text-center"
+      className="relative bg-cream text-forest py-20 px-8 md:px-16 text-center"
     >
       <h2 className="text-3xl font-heading mb-4">sampai jumpa di berg puntang!</h2>
 
@@ -32,6 +53,17 @@ const EndSection = () => {
       <p className="mt-10 text-sm text-gray-500">
         dibuat dengan ❤️ oleh Hugo, dibantu ChatGPT & Gemini
       </p>
+
+      {/* ✅ Scroll to Top Button */}
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-4 bg-forest text-cream p-2 rounded-full shadow-md hover:bg-forest/80 transition z-50"
+          aria-label="Kembali ke atas"
+        >
+          <FaArrowUp size={14} />
+        </button>
+      )}
     </section>
   );
 };
