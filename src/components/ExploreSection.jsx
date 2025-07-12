@@ -15,7 +15,7 @@ const images = [
 const ExploreSection = () => {
   return (
     <section id="explore" className="bg-leaf/80 text-forest py-20 px-8 md:px-16">
-      <h2 className="text-3xl font-heading mb-6">Pesona Berg Puntang</h2>
+      <h2 className="text-3xl font-heading mb-6">pesona berg puntang</h2>
 
       <p className="mb-10 max-w-3xl text-sm md:text-base text-forest">
         Berg Puntang adalah destinasi unik di kaki Gunung Puntang, Bandung, yang menggabungkan pesona alam pegunungan, situs sejarah peninggalan kolonial, dan suasana kafe modern. Tempat ini dulunya adalah lokasi <strong>Stasiun Radio Malabar</strong> yang dibangun tahun 1917 dan berperan penting dalam sejarah komunikasi kolonial. Kini, puing-puingnya menjadi bagian dari lanskap yang estetik dan otentik — cocok untuk healing, foto-foto, atau sekadar duduk santai sambil ngopi.
