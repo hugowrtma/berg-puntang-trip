@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabaseClient';
 import { FaTrash, FaPen } from 'react-icons/fa';
 import ImageUploader from '../components/ImageUploaderCloudinary';
 
-const defaultAvatar = '/assets/avatar.png'; // ✅ Pastikan file ini ada di /public/assets/
+const defaultAvatar = '/assets/avatar.png';
 
 const CrewSection = () => {
   const [crew, setCrew] = useState([]);
@@ -40,7 +40,7 @@ const CrewSection = () => {
     ]);
 
     if (!error) {
-      await fetchCrew(); // ✅ Refresh otomatis
+      await fetchCrew();
       setForm({ name: '', role: '', agree: false });
       setAvatarUrl(null);
     } else {
@@ -88,7 +88,8 @@ const CrewSection = () => {
         <p className="text-sm text-forest">Mau ikut? Isi form di bawah ya.</p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-16">
+      {/* ✅ Grid now shows 3 columns on small screens */}
+      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-16">
         {!crew.length && (
           <p className="col-span-full text-center italic text-cream">
             Belum ada yang mendaftar
@@ -97,13 +98,13 @@ const CrewSection = () => {
         {crew.map((person) => (
           <div
             key={person.id}
-            className="relative text-center space-y-2 group"
+            className="relative text-center space-y-1 group"
           >
             <div className="relative inline-block">
               <img
                 src={person.avatar || defaultAvatar}
                 alt={person.name}
-                className="w-20 h-20 rounded-full object-cover shadow-md"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover shadow-md"
               />
               {/* Tombol Edit */}
               <button
@@ -120,8 +121,8 @@ const CrewSection = () => {
                 <FaTrash size={12} />
               </button>
             </div>
-            <p className="font-semibold text-cream">{person.name}</p>
-            <p className="text-sm text-forest">{person.role}</p>
+            <p className="text-[13px] font-semibold text-cream">{person.name}</p>
+            <p className="text-[12px] text-forest">{person.role}</p>
           </div>
         ))}
       </div>
