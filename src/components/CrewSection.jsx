@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import { FaTrash, FaPen } from 'react-icons/fa';
-import ImageUploader from './ImageUploaderCloudinary'; // Ganti ini
+import ImageUploader from '../components/ImageUploaderCloudinary';
 
-const defaultAvatar = '/assets/default-avatar.png';
+const defaultAvatar = '/assets/avatar.png';
 
 const CrewSection = () => {
   const [crew, setCrew] = useState([]);
@@ -37,7 +37,9 @@ const CrewSection = () => {
     ]);
 
     if (!error) {
-      setCrew((prev) => [...prev, ...data]);
+      if (Array.isArray(data)) {
+        setCrew((prev) => [...prev, ...data]);
+      }
       setForm({ name: '', role: '', agree: false });
       setAvatarUrl(null);
     } else {
@@ -62,11 +64,15 @@ const CrewSection = () => {
 
     const { data, error } = await supabase
       .from('crew')
-      .update({ name: editing.name, role: editing.role })
+      .update({
+        name: editing.name,
+        role: editing.role,
+        avatar: editing.avatar || defaultAvatar,
+      })
       .eq('id', editing.id)
       .select();
 
-    if (!error) {
+    if (!error && Array.isArray(data)) {
       setCrew((prev) => prev.map((c) => (c.id === editing.id ? data[0] : c)));
       closeEdit();
     } else {
@@ -184,6 +190,11 @@ const CrewSection = () => {
               onChange={(e) => setEditing({ ...editing, role: e.target.value })}
               className="w-full p-2 border rounded border-forest/30"
             />
+
+            <ImageUploader
+              onUploaded={(url) => setEditing((prev) => ({ ...prev, avatar: url }))}
+            />
+
             <div className="flex justify-end space-x-2">
               <button
                 onClick={closeEdit}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-const CLOUD_NAME = 'dyhx1f7fn'; // ✅ Sudah kamu siapkan
-const UPLOAD_PRESET = 'unsigned_preset'; // ✅ Pastikan preset ini sudah dibuat di Cloudinary dashboard
+const CLOUD_NAME = 'dyhx1f7fn'; // Ganti sesuai Cloudinary kamu
+const UPLOAD_PRESET = 'unsigned_preset'; // Pastikan sesuai preset Cloudinary
 
 const ImageUploader = ({ onUploaded }) => {
   const [uploading, setUploading] = useState(false);
