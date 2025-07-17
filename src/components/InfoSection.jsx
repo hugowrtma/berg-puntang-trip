@@ -22,7 +22,17 @@ const InfoSection = () => {
         <div className="space-y-3">
           <h3 className="font-semibold text-base mb-1">📞 Kontak & Koordinasi</h3>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Leader:</strong> Hansen – <a href="tel:082213610738" className="underline hover:text-forest/80">0822-1361-0738</a></li>
+          <li>
+            <strong>Leader:</strong> Hansen –{' '}
+            <a
+              href="https://wa.me/6282213610738"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-forest/80"
+            >
+              0822-1361-0738
+            </a>
+          </li>
             <li><strong>WA Group:</strong> “MINIMAL NONGOL” (aktifkan notifikasi)</li>
             <li><strong>Briefing:</strong> via WA call malam H-1</li>
           </ul>

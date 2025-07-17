@@ -2,7 +2,7 @@ import React from 'react';
 
 const rundownData = [
   {
-    day: 'Hari 1 – Jumat, 8 Agustus 2025',
+    day: 'Hari 1 – Jumat, 15 Agustus 2025',
     events: [
       '05.00 WIB – Berkumpul di titik kumpul (Bekasi)',
       '05.30 WIB – Berangkat menuju Green Corner Land, Pangalengan',
@@ -15,7 +15,7 @@ const rundownData = [
     ]
   },
   {
-    day: 'Hari 2 – Sabtu, 9 Agustus 2025',
+    day: 'Hari 2 – Sabtu, 16 Agustus 2025',
     events: [
       '07.00 WIB – Sarapan bareng dengan kopi lokal',
       '08.30 WIB – Naik perahu mengelilingi Situ Cileunca',
@@ -27,7 +27,7 @@ const rundownData = [
     ]
   },
   {
-    day: 'Hari 3 – Minggu, 10 Agustus 2025',
+    day: 'Hari 3 – Minggu, 17 Agustus 2025',
     events: [
       '07.00 WIB – Sarapan pagi & ngopi santai',
       '08.30 WIB – Packing & beres-beres cabin',
