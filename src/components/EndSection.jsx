@@ -53,11 +53,10 @@ const EndSection = () => {
           className="w-24 h-24 sm:w-32 sm:h-32 rounded object-cover flex-shrink-0"
         />
       </div>
-      <h2 className="text-3xl font-heading mb-4">sampai jumpa di berg puntang!</h2>
+      <h2 className="text-3xl font-heading mb-4">sampai jumpa di Green Corner!</h2>
 
       <p className="text-lg font-body mb-6 max-w-xl mx-auto">
-        mari jadikan perjalanan ini momen yang tak terlupakan — penuh kode bersih,
-        tenda yang kokoh, dan kenangan yang akan kita ceritakan terus-menerus.
+        mari jadikan perjalanan ini momen yang tak terlupakan — dengan kabin nyaman di tengah alam Pangalengan, tawa hangat, dan cerita yang akan terus kita kenang.
       </p>
 
       <button

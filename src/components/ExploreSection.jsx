@@ -1,24 +1,24 @@
 import React from 'react';
 
 const images = [
-  '/assets/puntang-1.jpg',
-  '/assets/puntang-2.jpg',
-  '/assets/puntang-3.jpg',
-  '/assets/puntang-4.jpg',
-  '/assets/puntang-5.jpg',
-  '/assets/puntang-6.jpg',
-  '/assets/puntang-7.jpg',
-  '/assets/puntang-8.jpg',
-  '/assets/puntang-9.jpg',
+  '/assets/1.png',
+  '/assets/2.png',
+  '/assets/3.png',
+  '/assets/4.png',
+  '/assets/5.png',
+  '/assets/6.png',
+  '/assets/7.png',
+  '/assets/8.png',
+  '/assets/9.png',
 ];
 
 const ExploreSection = () => {
   return (
     <section id="explore" className="bg-leaf/80 text-forest py-20 px-8 md:px-16">
-      <h2 className="text-3xl font-heading mb-6">pesona berg puntang</h2>
+      <h2 className="text-3xl font-heading mb-6">pesona green corner</h2>
 
-      <p className="mb-10 max-w-3xl text-sm md:text-base text-forest">
-        Berg Puntang adalah destinasi unik di kaki Gunung Puntang, Bandung, yang menggabungkan pesona alam pegunungan, situs sejarah peninggalan kolonial, dan suasana kafe modern. Tempat ini dulunya adalah lokasi <strong>Stasiun Radio Malabar</strong> yang dibangun tahun 1917 dan berperan penting dalam sejarah komunikasi kolonial. Kini, puing-puingnya menjadi bagian dari lanskap yang estetik dan otentik — cocok untuk healing, foto-foto, atau sekadar duduk santai sambil ngopi.
+      <p className="mb-10 max-w-3xl text-justify text-sm md:text-base text-forest">
+        Green Corner adalah tempat camping dan glamping bernuansa alam yang terletak di tepi <strong>Situ Cileunca</strong>, Pangalengan, Bandung. Dikelilingi kabut pagi, danau tenang, serta pepohonan rindang — tempat ini cocok untuk <em>healing</em>, BBQ malam, dan menikmati keindahan sunrise & sunset dari dua area unik: <strong>Green Corner (main)</strong> dan <strong>GC Land</strong> yang hanya bisa dijangkau dengan perahu.
       </p>
 
       {/* Galeri Foto */}
@@ -35,29 +35,30 @@ const ExploreSection = () => {
         ))}
       </div>
 
-      {/* Daftar Wisata */}
+      {/* Daftar Aktivitas */}
       <ul className="list-disc pl-5 text-sm text-forest space-y-1 mb-6">
-        <li>Panorama pegunungan & udara sejuk</li>
-        <li>Area camping luas dan rindang</li>
-        <li>Reruntuhan Radio Malabar (1917–1946)</li>
-        <li>Kafe Berg Puntang dengan view terbuka</li>
-        <li>Sungai Cihanjawar yang jernih</li>
-        <li>Jalur tracking ringan–menengah</li>
-        <li>Spot foto alam yang Instagramable</li>
-        <li>Malam api unggun & BBQ seru bareng teman</li>
+        <li>Camping tepi danau dengan pemandangan sunrise & sunset</li>
+        <li>Area GC Land yang privat & hanya bisa diakses dengan perahu</li>
+        <li>Fasilitas lengkap: toilet, musala, warung, listrik</li>
+        <li>Aktivitas seru: rafting, perahu, flying fox, paintball</li>
+        <li>Suasana pagi berkabut dan udara super sejuk</li>
+        <li>Area glamping dengan tenda nyaman & estetik</li>
+        <li>Spot foto alam di dermaga & pinggir danau</li>
+        <li>BBQ & api unggun malam bareng teman-teman</li>
       </ul>
 
-      {/* Tips */}
+      {/* Info Praktis */}
       <div className="bg-cream/90 rounded-md p-4 text-sm space-y-2 mb-8">
-        <p><strong>📍 Lokasi:</strong> Jl. Gn. Puntang, Pasirmulya, Banjaran, Bandung</p>
-        <p><strong>⛺ HTM:</strong> Rp25.000/orang (area wisata), Rp10.000 masuk kafe, camping mulai dari Rp200.000/2 orang</p>
-        <p><strong>🕗 Jam buka:</strong> 08.00 – 20.00 WIB (setiap hari)</p>
-        <p><strong>📷 Waktu terbaik:</strong> pagi hari saat cerah, terutama musim kemarau</p>
+        <p><strong>📍 Lokasi:</strong> Situ Cileunca, Pangalengan, Kab. Bandung</p>
+        <p><strong>⛺ HTM Camping Mandiri:</strong> Rp35.000/orang (bawa tenda sendiri)</p>
+        <p><strong>🏕️ Glamping:</strong> tersedia, harga tergantung paket & fasilitas</p>
+        <p><strong>🛶 Akses GC Land:</strong> via perahu dari dermaga utama</p>
+        <p><strong>📷 Waktu terbaik:</strong> pagi & sore untuk foto dan suasana syahdu</p>
       </div>
 
       {/* Quote */}
       <p className="text-center text-cream italic font-body">
-        “Dari ketenangan alam hingga momen kebersamaan, Berg Puntang siap menyambut kita.”
+        “Tidur di tepi danau, bangun bersama kabut dan cahaya pagi yang lembut.”
       </p>
     </section>
   );

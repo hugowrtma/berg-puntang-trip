@@ -12,7 +12,7 @@ const rides = [
   {
     img: '/assets/car-tucson.jpg',
     type: 'Hyundai Tucson',
-    year: '2009',
+    year: '2011',
     transmission: 'Automatic',
     capacity: '5 Penumpang',
     special: 'Full AC + Interior Cozy + Bluetooth audio',
@@ -25,7 +25,7 @@ const RideSection = () => {
       <h2 className="text-3xl font-heading mb-10">kendaraan tempur</h2>
       <div className="grid md:grid-cols-2 gap-10">
         {rides.map((ride, index) => (
-          <div key={index} className="bg-leaf/30 rounded-xl shadow-soft p-6 space-y-4">
+          <div key={index} className="bg-leaf/60 rounded-xl shadow-soft p-6 space-y-4">
             <img src={ride.img} alt={ride.type} className="w-full h-52 object-cover rounded-md" />
             <ul className="text-sm space-y-1">
               <li><strong>Tipe Mobil:</strong> {ride.type}</li>
@@ -38,7 +38,7 @@ const RideSection = () => {
         ))}
       </div>
       <p className="mt-10 text-center text-leaf italic font-body">
-        “nyaman dan siap mengantar kita melintasi setiap kilometer menuju puntang”
+        “nyaman dan siap mengantar kita sampai tepi danau Pangalengan”
       </p>
     </section>
   );

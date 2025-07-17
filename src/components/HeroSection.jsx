@@ -8,9 +8,9 @@ const HeroSection = () => {
     >
       <div className="md:w-1/2 space-y-4">
         <h1 className="text-4xl md:text-6xl font-heading text-forest font-bold leading-tight">
-          anak anak lucu goes to BERG Puntang
+          anak anak lucu goes to Green Corner
         </h1>
-        <p className="text-lg text-leaf font-body">3 hari 3 malam</p>
+        <p className="text-lg text-leaf font-body">3 hari 2 malam</p>
         <a
           href="#crew"
           className="inline-block mt-6 px-6 py-3 bg-leaf text-white rounded-full shadow-soft hover:opacity-90 transition"
@@ -21,7 +21,7 @@ const HeroSection = () => {
       <div className="md:w-1/2">
         <img
           src="/assets/trip.gif"
-          alt="Trip GIF"
+          alt="Trip ke Green Corner"
           className="rounded-full w-72 h-72 object-cover mx-auto shadow-lg"
         />
       </div>

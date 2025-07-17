@@ -5,33 +5,34 @@ const rundownData = [
     day: 'Hari 1 – Jumat, 8 Agustus 2025',
     events: [
       '05.00 WIB – Berkumpul di titik kumpul (Bekasi)',
-      '05.30 WIB – Berangkat menuju BERG Puntang',
-      '10.00 WIB – Tiba di lokasi, registrasi & mendirikan tenda',
-      '12.00 WIB – Istirahat & makan siang ringan',
-      '15.00 WIB – Jelajah ringan sekitar area camping',
-      '18.00 WIB – Makan malam & persiapan api unggun',
-      '20.00 WIB – Api unggun & ngobrol santai'
+      '05.30 WIB – Berangkat menuju Green Corner Land, Pangalengan',
+      '10.30 WIB – Tiba di lokasi, registrasi & check-in cabin',
+      '12.00 WIB – Istirahat & makan siang',
+      '15.00 WIB – Jalan santai keliling area sekitar Situ Cileunca',
+      '17.30 WIB – Sunset viewing di deck utama',
+      '19.00 WIB – Makan malam & sharing malam',
+      '21.00 WIB – Api unggun kecil & santai di sekitar cabin'
     ]
   },
   {
     day: 'Hari 2 – Sabtu, 9 Agustus 2025',
     events: [
-      '06.30 WIB – Sarapan bersama',
-      '08.00 WIB – Tracking ke sungai Cihanjawar',
-      '11.00 WIB – Istirahat, foto-foto, dan eksplor alam',
-      '13.00 WIB – Makan siang & istirahat di tenda',
-      '16.00 WIB – Sesi bebas (main kartu, gitaran, dsb)',
-      '19.00 WIB – Makan malam & sesi sharing santai',
-      '21.00 WIB – Games malam, chill, dan tidur'
+      '07.00 WIB – Sarapan bareng dengan kopi lokal',
+      '08.30 WIB – Naik perahu mengelilingi Situ Cileunca',
+      '10.30 WIB – Explore hutan pinus sekitar dan foto-foto',
+      '12.30 WIB – Makan siang & free time di cabin',
+      '15.00 WIB – Games outdoor & aktivitas santai',
+      '18.00 WIB – BBQ malam & musik akustik',
+      '21.00 WIB – Chill malam, bintang-bintang, dan tidur'
     ]
   },
   {
     day: 'Hari 3 – Minggu, 10 Agustus 2025',
     events: [
-      '06.00 WIB – Sarapan & persiapan pulang',
-      '07.30 WIB – Bersih-bersih area camping',
-      '09.00 WIB – Perjalanan kembali ke Bekasi',
-      '13.00 WIB – Tiba di rumah masing-masing dengan selamat'
+      '07.00 WIB – Sarapan pagi & ngopi santai',
+      '08.30 WIB – Packing & beres-beres cabin',
+      '10.00 WIB – Perjalanan pulang ke Bekasi',
+      '14.00 WIB – Sampai di rumah masing-masing, selesai dengan penuh kenangan'
     ]
   }
 ];

@@ -7,33 +7,17 @@ const PackSection = () => {
 
       <div className="grid md:grid-cols-2 gap-12 text-sm leading-relaxed">
         <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong>Pakaian:</strong> jaket tebal, baju ganti 2–3 set, kaos kaki hangat, celana training, pakaian tidur, topi kupluk/syal
-          </li>
-          <li>
-            <strong>Perlengkapan pribadi:</strong> handuk kecil, sabun mandi, sikat & pasta gigi, obat-obatan pribadi, tisu basah/kering, sunblock, deodorant
-          </li>
-          <li>
-            <strong>Perlengkapan tidur:</strong> sleeping bag, matras lipat, bantal angin/kecil, selimut tipis (opsional)
-          </li>
-          <li>
-            <strong>Tambahan outdoor:</strong> senter/headlamp, power bank, jas hujan, korek api, kantong sampah, alat makan pribadi (piring, sendok, gelas)
-          </li>
+          <li><strong>Pakaian:</strong> jaket, ganti baju, kaos kaki, celana training, pakaian tidur, kupluk/syal</li>
+          <li><strong>Pribadi:</strong> handuk, sabun, sikat gigi, obat, tisu, sunblock, deodorant</li>
+          <li><strong>Tidur:</strong> sleeping bag, matras, bantal kecil, selimut (opsional)</li>
+          <li><strong>Outdoor:</strong> senter/headlamp, power bank, jas hujan, korek, kantong sampah, alat makan</li>
         </ul>
 
         <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong>Elektronik & dokumentasi:</strong> kamera, charger, kabel cadangan, tripod kecil, kartu memori
-          </li>
-          <li>
-            <strong>Perlengkapan tracking:</strong> sepatu gunung/sneakers tahan licin, sandal outdoor, tas kecil untuk tracking ringan, botol air minum refillable
-          </li>
-          <li>
-            <strong>Makanan & minuman pribadi:</strong> snack favorit, mie instan, kopi/teh, susu UHT, roti, permen, air mineral
-          </li>
-          <li>
-            <strong>Lain-lain (opsional):</strong> buku bacaan, kartu UNO/catur mini, alat musik kecil, hammock
-          </li>
+          <li><strong>Elektronik:</strong> kamera, charger, kabel cadangan, tripod, memori</li>
+          <li><strong>Tracking:</strong> sepatu/sandal outdoor, tas kecil, botol minum isi ulang</li>
+          <li><strong>Logistik:</strong> snack, mie, kopi/teh, susu, roti, permen, air mineral</li>
+          <li><strong>Lainnya:</strong> buku, UNO/catur, alat musik kecil, hammock</li>
         </ul>
       </div>
 

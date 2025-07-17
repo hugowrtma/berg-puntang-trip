@@ -175,7 +175,7 @@ const CrewSection = () => {
             loading ? 'opacity-60 cursor-not-allowed' : 'hover:bg-leaf'
           }`}
         >
-          {loading ? 'Mengirim...' : 'Ikut Trip'}
+          {loading ? 'Uploading...' : 'Ikut Trip'}
         </button>
       </form>
 
@@ -222,7 +222,7 @@ const CrewSection = () => {
       )}
 
       <p className="mt-10 text-center italic text-cream font-body">
-        “bersama sama, kita akan menaklukan tantangan dan keindahan alam gunung puntang”
+        “bersama sama, kita akan menaklukan tantangan dan keindahan alam di area green corner cabin”
       </p>
     </section>
   );
